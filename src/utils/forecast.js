@@ -15,7 +15,7 @@ const forecast = (latitude,longitude,callback) => {
         }
         else
         {
-            callback(undefined, body.daily.data[0].summary+'It is currently '+body.currently.temperature+' degrees outside. There is a '+body.currently.precipProbability+'% chance of raining.')
+            callback(undefined, body.daily.data[0].summary+'It is currently '+body.currently.temperature+' degrees outside with a wind speed of \n'+body.currently.windSpeed+' kph.\nThere is a '+body.currently.precipProbability+'% chance of raining.')
         }
     })
 }
